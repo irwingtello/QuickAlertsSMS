@@ -17,7 +17,7 @@ const client = require('twilio')(process.env.ACCOUNTSID, process.env.AUTHTOKEN);
 
 client.messages
     .create({
-      body: process.env.MESSAGE,
+      body: process.env.MESSAGE + requestData.length,
       from: process.env.FROM,
       to:  process.env.TO
     })
